@@ -1,1 +1,38 @@
 
+package SeleniumAutomationclass1;
+
+
+	
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class LauchandLogin {
+
+public static void main(String [] args) {
+
+		
+	FirefoxDriver driver1 =new FirefoxDriver();
+	driver1.get("http://leaftaps.com/opentaps/");
+	driver1.manage().window().maximize();
+
+	String title =driver1.getTitle();
+	System.out.println(title);
+	driver1.findElement(By.id("username")).sendKeys("demosalesmanager");
+	driver1.findElement(By.name("PASSWORD")).sendKeys("crmsfa");
+	driver1.findElement(By.className("decorativeSubmit")).click();
+	driver1.findElement(By.partialLinkText("SFA")).click();
+	driver1.findElement(By.linkText("Leads")).click();
+	driver1.findElement(By.linkText("Create Lead")).click();
+	driver1.findElement(By.id("createLeadForm_companyName")).sendKeys("Bhanus Testleaf");
+driver1.findElement(By.id("createLeadForm_firstName")).sendKeys(" Bhanupriya");
+driver1.findElement(By.id("createLeadForm_lastName")).sendKeys(" Automation Tester");
+
+	
+	
+	
+	
+	
+	
+	}
+
+
+	}
